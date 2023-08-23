@@ -1,9 +1,6 @@
 package filter;
 
 import VASSAL.counters.GamePiece;
-import automation.GameProperties;
-import java.lang.reflect.Field;
-import java.lang.reflect.Modifier;
 import java.util.HashMap;
 
 /**
@@ -21,26 +18,6 @@ public class DefaultPropertyReaderSource implements PropertyReaderSource {
 
   public void addReader(String name, PropertyReader reader) {
     customReaders.put(name, reader);
-  }
-
-  public void addReader(final String name) {
-    customReaders.put(name, new PropertyReader() {
-      public String getProperty(GamePiece gp) {
-        return GameProperties.getStringProperty(gp, name);
-      }
-    });
-  }
-
-  public void addReader(Class<?> c) {
-    for (Field f : c.getFields()) {
-      if ((Modifier.isStatic(f.getModifiers())) && (f.getName().startsWith("T_"))) {
-        try {
-          addReader(String.valueOf(f.get(null)));
-        } catch (IllegalAccessException ex) {
-
-        }
-      }
-    }
   }
 
   public PropertyReader getPropertyReader(final String name) {
