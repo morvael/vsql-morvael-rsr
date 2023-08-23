@@ -10,7 +10,7 @@ import VASSAL.counters.GamePiece;
 
 /**
  *
- * @author Dominik
+ * @author morvael
  */
 public final class Operator2Formula extends Formula {
   

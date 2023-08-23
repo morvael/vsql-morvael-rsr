@@ -9,7 +9,7 @@ import terrain.TerrainHexGrid;
 
 /**
  *
- * @author derwido
+ * @author morvael
  * @since 2009-05-20
  */
 public final class AirFleetCache extends Cache {

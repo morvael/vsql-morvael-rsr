@@ -17,7 +17,7 @@ import VASSAL.tools.SequenceEncoder;
 
 /**
  *
- * @author derwido
+ * @author morvael
  * @since 2009-05-08
  */
 public class RsrImmobilized extends Decorator implements TranslatablePiece, RsrConstants {

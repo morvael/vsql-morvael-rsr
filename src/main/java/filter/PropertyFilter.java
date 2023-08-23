@@ -7,7 +7,7 @@ import java.util.HashMap;
 
 /**
  *
- * @author Dominik
+ * @author morvael
  */
 public class PropertyFilter extends Filter implements FilterCheck {
 

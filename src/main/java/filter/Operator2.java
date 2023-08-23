@@ -8,7 +8,7 @@ package filter;
 
 /**
  *
- * @author Dominik
+ * @author morvael
  */
 public enum Operator2 {
   /**

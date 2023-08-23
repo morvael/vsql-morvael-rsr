@@ -13,7 +13,7 @@ import VASSAL.counters.GamePiece;
 
 /**
  *
- * @author derwido
+ * @author morvael
  * @since 2009-05-18
  */
 public final class RsrMapShaderAdvance extends RsrMapShaderBase {

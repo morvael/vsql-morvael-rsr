@@ -11,7 +11,7 @@ import terrain.TerrainMapShaderCost;
 
 /**
  *
- * @author Dominik
+ * @author morvael
  */
 public class RsrAllowedMovement {
 

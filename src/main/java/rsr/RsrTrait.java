@@ -25,7 +25,7 @@ import java.util.HashMap;
 
 /**
  *
- * @author derwido
+ * @author morvael
  * @since 2009-05-11
  */
 public final class RsrTrait extends Decorator implements TranslatablePiece, RsrConstants {

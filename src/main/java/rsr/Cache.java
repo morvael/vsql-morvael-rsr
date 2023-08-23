@@ -9,7 +9,7 @@ import terrain.TerrainMapShaderCost;
 
 /**
  *
- * @author derwido
+ * @author morvael
  * @since 2009-05-20
  */
 public abstract class Cache implements RsrConstants {

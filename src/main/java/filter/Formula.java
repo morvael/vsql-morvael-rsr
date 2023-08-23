@@ -10,7 +10,7 @@ import VASSAL.counters.GamePiece;
 
 /**
  *
- * @author Dominik
+ * @author morvael
  */
 public abstract class Formula {
   

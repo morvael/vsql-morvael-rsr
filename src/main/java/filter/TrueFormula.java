@@ -11,7 +11,7 @@ import VASSAL.counters.GamePiece;
 
 /**
  *
- * @author dominik
+ * @author morvael
  */
 public final class TrueFormula extends Formula {
   

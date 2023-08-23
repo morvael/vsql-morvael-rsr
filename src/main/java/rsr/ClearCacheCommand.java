@@ -4,7 +4,7 @@ import VASSAL.command.Command;
 
 /**
  *
- * @author derwido
+ * @author morvael
  * @since 2009-07-01
  */
 public class ClearCacheCommand extends Command {

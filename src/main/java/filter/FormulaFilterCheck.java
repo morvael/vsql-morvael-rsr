@@ -4,7 +4,7 @@ import VASSAL.counters.GamePiece;
 
 /**
  *
- * @author Dominik
+ * @author morvael
  */
 public class FormulaFilterCheck implements FilterCheck {
 

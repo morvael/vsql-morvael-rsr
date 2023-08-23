@@ -4,7 +4,7 @@ import VASSAL.command.Command;
 
 /**
  *
- * @author derwido
+ * @author morvael
  * @since 2011-08-25
  */
 public class OverstackCommand extends Command {

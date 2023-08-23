@@ -2,7 +2,7 @@ package rsr;
 
 /**
  *
- * @author derwido
+ * @author morvael
  * @since 2009-05-22
  */
 public interface RsrConstants {

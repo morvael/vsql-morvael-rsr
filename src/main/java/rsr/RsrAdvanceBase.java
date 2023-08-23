@@ -39,7 +39,7 @@ import filter.SafeFormulaFilter;
 
 /**
  *
- * @author derwido
+ * @author morvael
  * @since 2009-05-08
  */
 public abstract class RsrAdvanceBase implements RsrButtonCommand, RsrConstants, GameComponent {

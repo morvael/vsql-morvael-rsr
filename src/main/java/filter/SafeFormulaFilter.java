@@ -2,7 +2,7 @@ package filter;
 
 /**
  *
- * @author Dominik
+ * @author morvael
  */
 public class SafeFormulaFilter extends Filter {
 

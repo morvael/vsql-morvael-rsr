@@ -11,7 +11,7 @@ import terrain.TerrainHexGrid;
 
 /**
  *
- * @author Dominik
+ * @author morvael
  */
 public abstract class Filter {
 

@@ -11,7 +11,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author Dominik
+ * @author morvael
  */
 public final class AttributesFormula extends LeafFormula {
   

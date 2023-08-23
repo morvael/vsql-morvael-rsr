@@ -11,7 +11,7 @@ import java.util.regex.*;
 
 /**
  *
- * @author Dominik
+ * @author morvael
  */
 public final class Parser {
   

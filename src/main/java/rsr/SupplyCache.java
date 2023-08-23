@@ -12,7 +12,7 @@ import terrain.TerrainMapShaderRule;
 
 /**
  *
- * @author derwido
+ * @author morvael
  * @since 2009-05-20
  */
 public final class SupplyCache extends Cache implements HexControlInfo {

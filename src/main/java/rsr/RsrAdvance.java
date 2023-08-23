@@ -20,7 +20,7 @@ import terrain.TerrainMapShaderCost;
 
 /**
  *
- * @author derwido
+ * @author morvael
  * @since 2009-05-08
  */
 public final class RsrAdvance extends RsrAdvanceBase {

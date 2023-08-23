@@ -11,7 +11,7 @@ import java.util.*;
 
 /**
  *
- * @author Dominik
+ * @author morvael
  */
 public final class StringsFormula extends LeafFormula {
   

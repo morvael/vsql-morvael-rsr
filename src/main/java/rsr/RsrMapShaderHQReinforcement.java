@@ -12,7 +12,7 @@ import VASSAL.counters.GamePiece;
 
 /**
  *
- * @author derwido
+ * @author morvael
  * @since 2009-05-21
  */
 public final class RsrMapShaderHQReinforcement extends RsrMapShaderBase implements HexControlInfo {

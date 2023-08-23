@@ -10,7 +10,7 @@ import javax.swing.KeyStroke;
 
 /**
  *
- * @author derwido
+ * @author morvael
  * @since 2009-06-02
  */
 public class RsrKeyCommand extends KeyCommand {

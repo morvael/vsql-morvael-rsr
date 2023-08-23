@@ -28,7 +28,7 @@ import java.awt.event.InputEvent;
 
 /**
  *
- * @author derwido
+ * @author morvael
  * @since 2009-05-12
  */
 public final class RsrGlobal extends Decorator implements TranslatablePiece, RsrConstants {

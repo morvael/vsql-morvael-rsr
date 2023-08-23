@@ -5,7 +5,7 @@ import VASSAL.counters.PieceFilter;
 
 /**
  *
- * @author Dominik
+ * @author morvael
  */
 public class PropertyFilterCheck implements FilterCheck {
 

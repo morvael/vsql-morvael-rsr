@@ -6,7 +6,7 @@ import java.util.HashSet;
 
 /**
  *
- * @author Dominik
+ * @author morvael
  */
 public class StackInfo {
 

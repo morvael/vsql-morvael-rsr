@@ -9,7 +9,7 @@ import terrain.TerrainHexGrid;
 
 /**
  *
- * @author Dominik
+ * @author morvael
  */
 public class CombatHexList implements Iterable<String> {
 

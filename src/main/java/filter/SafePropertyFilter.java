@@ -6,7 +6,7 @@ import java.util.HashMap;
 
 /**
  *
- * @author Dominik
+ * @author morvael
  */
 public class SafePropertyFilter extends Filter {
 

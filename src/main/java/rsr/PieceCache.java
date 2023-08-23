@@ -12,7 +12,7 @@ import terrain.TerrainHexGrid;
 
 /**
  *
- * @author derwido
+ * @author morvael
  * @since 2009-05-21
  */
 public final class PieceCache extends Cache {

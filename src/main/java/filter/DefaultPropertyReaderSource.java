@@ -5,7 +5,7 @@ import java.util.HashMap;
 
 /**
  *
- * @author Dominik
+ * @author morvael
  */
 public class DefaultPropertyReaderSource implements PropertyReaderSource {
 
