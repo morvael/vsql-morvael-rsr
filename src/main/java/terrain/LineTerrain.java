@@ -81,7 +81,7 @@ public class LineTerrain extends MapTerrain {
   public void setAttribute(String key, Object value) {
     if (WIDTH.equals(key)) {
       if (value instanceof String) {
-        value = new Integer((String) value);
+        value = Integer.valueOf((String) value);
       }
       width = ((Integer) value).intValue();
     }

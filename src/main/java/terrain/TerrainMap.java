@@ -35,8 +35,8 @@ import VASSAL.build.GameModule;
 import VASSAL.build.module.map.boardPicker.Board;
 import VASSAL.tools.ArchiveWriter;
 import VASSAL.tools.DataArchive;
-import VASSAL.tools.io.IOUtils;
 import java.util.HashSet;
+import org.apache.commons.io.IOUtils;
 
 /**
  * The terrain map. Holds all defined terrain for a board, plus appropriate

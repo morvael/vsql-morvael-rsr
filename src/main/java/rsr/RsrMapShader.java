@@ -1,5 +1,6 @@
 package rsr;
 
+import VASSAL.build.AbstractToolbarItem;
 import java.awt.Color;
 import java.awt.Image;
 import java.awt.Rectangle;
@@ -50,7 +51,7 @@ public class RsrMapShader extends MapShader {
   @Override
   public Class<?>[] getAttributeTypes() {
     return new Class<?>[]{String.class, Boolean.class, Boolean.class,
-              String.class, String.class, IconConfig.class, KeyStroke.class,
+              String.class, String.class, AbstractToolbarItem.IconConfig.class, KeyStroke.class,
               BoardPrompt.class, String[].class, TypePrompt.class,
               Boolean.class, PatternPrompt.class, Color.class, Image.class,
               Integer.class, Boolean.class, Color.class, Integer.class,
@@ -138,7 +139,7 @@ public class RsrMapShader extends MapShader {
 
   @Override
   public void setLaunchButtonVisibility() {
-    launch.setVisible(false);
+    getLaunchButton().setVisible(false);
   }
 
   @Override
@@ -157,7 +158,7 @@ public class RsrMapShader extends MapShader {
 
       g2.setComposite(getComposite());
       g2.setColor(getColor());
-      g2.setPaint(scaleImage && pattern.equals(TYPE_IMAGE) && imageName != null ? getTexture(zoom) : getTexture());
+      g2.setPaint(scaleImage && pattern.equals(TYPE_IMAGE) && imageName != null ? getTexture(zoom) : getTexture(1.0));
       for (HexRef hr : shadedHexes) {
         Area area = getHexArea(zoom, hr);
         g2.fill(area);

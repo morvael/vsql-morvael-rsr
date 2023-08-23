@@ -68,7 +68,7 @@ import VASSAL.build.Buildable;
 import VASSAL.build.module.map.boardPicker.Board;
 import VASSAL.build.module.map.boardPicker.board.GridEditor;
 import VASSAL.build.module.map.boardPicker.board.mapgrid.RegularGridNumbering;
-import VASSAL.counters.Labeler;
+import VASSAL.tools.image.LabelUtils;
 
 /**
  * Edit Grid attributes, including Terrain
@@ -439,9 +439,7 @@ public class TerrainHexGridEditor extends GridEditor implements ActionListener,
 		} else if (SET.equals(option)) {
 			startSetMode();
 		} else if (TOGGLE_NUMBERING.equals(option)) {
-			((RegularGridNumbering) grid.getGridNumbering()).setAttribute(
-					RegularGridNumbering.VISIBLE, new Boolean(!grid
-							.getGridNumbering().isVisible()));
+			((RegularGridNumbering) grid.getGridNumbering()).setAttribute(RegularGridNumbering.VISIBLE, !grid.getGridNumbering().isVisible());
 			repaint();
 		} else if (TOGGLE_GRID.equals(option)) {
 			grid.setVisible(!grid.isVisible());
@@ -465,9 +463,7 @@ public class TerrainHexGridEditor extends GridEditor implements ActionListener,
 	protected void finalise() {
 		myGrid.setVisible(saveGridVisible);
 		if (myGrid.getGridNumbering() != null) {
-			((RegularGridNumbering) grid.getGridNumbering()).setAttribute(
-					RegularGridNumbering.VISIBLE, new Boolean(
-							saveNumberingVisible));
+			((RegularGridNumbering) grid.getGridNumbering()).setAttribute(RegularGridNumbering.VISIBLE, saveNumberingVisible);
 		}
 		myGrid.setEdgesLegal(saveSnapToEdges);
 		myGrid.setCornersLegal(saveSnapToCorners);
@@ -798,7 +794,7 @@ public class TerrainHexGridEditor extends GridEditor implements ActionListener,
 			final Point pos = attr.getLocation().getCenter();
 			final Color color = attr.getTerrain().getColor();
 			final String text = attr.getValue();
-			Labeler.drawLabel(g, text, pos.x, pos.y + (count * 15), 0, 0,
+			LabelUtils.drawLabel(g, text, pos.x, pos.y + (count * 15), 0, 0,
 					Color.black, color);
 		}
 

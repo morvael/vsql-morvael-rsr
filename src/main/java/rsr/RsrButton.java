@@ -162,7 +162,7 @@ public class RsrButton extends AbstractConfigurable implements RecursionLimiter.
         try {
           if (cmd == null) {
             Class<?> c = Class.forName(buttonClass);
-            cmd = (RsrButtonCommand) c.newInstance();
+            cmd = (RsrButtonCommand) c.getConstructor().newInstance();
           }
           cmd.getDesiredInstance().execute(buttonParam, (e.getModifiers() & ActionEvent.ALT_MASK) == ActionEvent.ALT_MASK);
         } catch (Exception ex) {

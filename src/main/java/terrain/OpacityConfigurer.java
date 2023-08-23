@@ -36,11 +36,11 @@ import VASSAL.configure.IntConfigurer;
 public class OpacityConfigurer extends IntConfigurer {
 
     public OpacityConfigurer(String key, String name, int val) {
-      super(key, name, new Integer(val));
+      super(key, name, Integer.valueOf(val));
     }
     
     public void setValue(int i) {
-      setValue(new Integer(i));
+      setValue(Integer.valueOf(i));
     }
     
     public Component getControls() {
@@ -48,8 +48,8 @@ public class OpacityConfigurer extends IntConfigurer {
       final JSlider slider = new JSlider(JSlider.HORIZONTAL,0,100,getIntValue(100));
 
       final Hashtable<Integer, JLabel> labelTable = new Hashtable<Integer, JLabel>();
-      labelTable.put( new Integer(0), new JLabel("Transparent") );
-      labelTable.put( new Integer(100), new JLabel("Opaque") );
+      labelTable.put(0, new JLabel("Transparent") );
+      labelTable.put(100, new JLabel("Opaque") );
 
       slider.setMajorTickSpacing(10);
       slider.setPaintTicks(true);

@@ -1,5 +1,6 @@
 package terrain;
 
+import VASSAL.build.AbstractToolbarItem;
 import java.awt.Color;
 import java.awt.Image;
 import java.awt.Point;
@@ -52,7 +53,7 @@ public class TerrainMapShader extends MapShader {
   @Override
   public Class<?>[] getAttributeTypes() {
     return new Class<?>[]{String.class, Boolean.class, Boolean.class,
-      String.class, String.class, IconConfig.class, KeyStroke.class,
+      String.class, String.class, AbstractToolbarItem.IconConfig.class, KeyStroke.class,
       BoardPrompt.class, String[].class, TypePrompt.class,
       Boolean.class, PatternPrompt.class, Color.class, Image.class,
       Integer.class, Boolean.class, Color.class, Integer.class,
@@ -132,7 +133,7 @@ public class TerrainMapShader extends MapShader {
     } else {
       try {
         Class<TerrainMapShaderRule> rc = (Class<TerrainMapShaderRule>) Class.forName(rulesClass);
-        rules = rc.newInstance();
+        rules = rc.getConstructor().newInstance();
         try {
           findGrid();
           rules.reset(map, grid, TerrainDefinitions.getInstance().getTerrainMap(grid), "", null);
@@ -202,7 +203,7 @@ public class TerrainMapShader extends MapShader {
 
   @Override
   public void setLaunchButtonVisibility() {
-    launch.setVisible(buttonVisible && !isAlwaysOn());
+    getLaunchButton().setVisible(buttonVisible && !isAlwaysOn());
   }
 
 }
