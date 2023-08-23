@@ -139,7 +139,7 @@ public class TerrainHexGrid extends HexGrid {
     return x;
   }
   
-  protected int getRawRow(Point p) {
+  public int getRawRow(Point p) {
     p = new Point(p);
     rotateIfSideways(p);
     final Point origin = getOrigin();

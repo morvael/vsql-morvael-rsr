@@ -6,4 +6,4 @@ Resurrected from revision 9151 of old [SVN repository](https://svn.code.sf.net/p
 that contained code for version 4.0.8.
 
 Remade into Maven project on GitHub in order to save the code for future
-generations and make the module compatible with Vassal 3.5+.
+generations and make the module compatible with Vassal 3.6+.

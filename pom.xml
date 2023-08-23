@@ -7,7 +7,7 @@
     <version>4.0.9</version>
 
     <properties>
-        <vassal.version>3.5.8</vassal.version>
+        <vassal.version>3.6.19</vassal.version>
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>

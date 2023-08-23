@@ -1,0 +1,229 @@
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<body>
+
+<H3>Version 4.0.9 - 23-Aug-23 - Dominik Derwinski </H3>
+<ul type="disc">
+	<li>Compatibility with Vassal 3.6 (tested against 3.6.19).</li>
+</ul>
+
+<H3>Version 4.0.8 - 17-Aug-14 - Dominik Derwinski </H3>
+<ul type="disc">
+	<li>Compatibility with Vassal 3.2 (tested against 3.2.13).</li>
+</ul>
+
+<H3>Version 4.0.7 - 01-Sep-11 - Dominik Derwinski </H3>
+<ul type="disc">
+	<li>Spaces that violate stack rules will be highlighted in yellow to prevent issues where overstack warning in game log was easily missed and units involuntarily destroyed as a result.</li>
+	<li>New method of drawing victory points on control markers, they are now readable on 50% zoom as well.</li>
+	<li>Warning about "Numeric field contains a non-number followProperty[Control]" is gone (as the result of above change).</li>
+	<li>Fixed situation where urban area effect on attacking motorized units would prevent defenders from retreat, thus blocking the game completely.</li>
+	<li>Better compatibility with Vassal 3.1 (tested against 3.1.16).</li>
+</ul>
+
+<H3>Version 4.0.6 - 11-Aug-10 - Dominik Derwinski & Arnaud Leclerc </H3>
+<ul type="disc">
+	<li>Overstacking is now allowed as per rule 4.0.7. This is a BIG change, as players now have to be extra careful while moving units, instead of being guided by computer, but this also means some advanced maneuvers like replacing frontline units will be possible to execute.</li>
+	<li>Violation of Axis minor stacking and Soviet cavalry stacking will now be counted as overstacking and allowed in certain situations, as per rule 4.0.7. See notes above.</li>
+	<li>Soviet Infantry armies are able to breakdown and buildup using Mechanized corps in addition to Infantry and Marine corps, finally following rules 17.3 and 17.4. To change the type of desired breakdown (into two Infantry, Infantry and Mechanized, or two Mechanized) click the Breakdown button while holding ALT key, and the new breakdown mode will be displayed in the game log. Default mode is to use two Infantry corps, and is reset when you reload the game.</li>
+	<li>Soviet Tank armies are no longer be able to breakdown into Mechanized corps, because they can't build up again, just like Guard and Shock armies, as per rule 17.4 ("regular" means Infantry, as per rule 6.0).</li>
+	<li>Fixed multi-step strategic movement to prevent moving farther away than originally allowed.</li>
+	<li>Fixed supply calculation to prevent moving further during strategic movement than original supply network allowed.</li>
+	<li>Fixed overstack-on-retreat procedure to allow more than one unit retreat from given stack if necessary.</li>
+	<li>Unit info will be painted on counter while zoomed out to 50%.</li>
+	<li>Zoom out capability added to off-map windows.</li>
+	<li>Overstack warning at the moment of creating or modifying a stack that violates the rules.</li>
+	<li>Urban armor loss warning at the moment of creating or modifying a combat that violates the rules.</li>
+</ul>
+
+<H3>Version 4.0.5 - 05-May-10 - Dominik Derwinski </H3>
+<ul type="disc">
+	<li>Due to wrong attribute name used, Soviet Strength markers were not returned to pools in case of "Soviet morale weakened!" effect.</li>
+</ul>
+
+<H3>Version 4.0.4 - 16-Nov-09 - Dominik Derwinski </H3>
+<ul type="disc">
+	<li>Added ability to delay reinforcements arrival as per 15.2.1.</li>
+	<li>Reinforcements that cannot be placed in valid location, are delayed automatically (previously you would be unable to continue game unless entering debug mode to manually fix the problem).</li>
+	<li>Finnish and Romanian HQs can no longer be deployed if their respective capitals are controlled by Soviet Union (but not necessarily occupied).</li>
+</ul>
+
+<H3>Version 4.0.3 - 7-July-09 - Dominik Derwinski </H3>
+<ul type="disc">
+	<li>Fixed 2-5 and 2-6 At-Start C Strength markers, "weak" side changed from 1-2 to 1-3.</li>
+</ul>
+
+<H3>Version 4.0.2 - 1-July-09 - Dominik Derwinski </H3>
+<ul type="disc">
+	<li>Fixed problem with piece cache being not refreshed on undo, which blocked some legal moves until save-reload.</li>
+	<li>Breakdown and buildup is no longer allowed in Finland or Romania on turn 1.</li>
+</ul>
+
+<H3>Version 4.0.1 - 30-June-09 - Dominik Derwinski </H3>
+<ul type="disc">
+	<li>Fixed limit of advance for units that can advance 1 or 2 spaces (3 steps lost prevent those units from advancing, not 1 and 2 respectively).</li>
+	<li>Fixed supply network calculation, where supply is traced from units to supply sources, and not the opposite (influenced supply range where unit's space had different supply enter cost than supply source's).</li>
+	<li>Fixed LineTerrain$StylePrompt accessibility problem (to stop module editor from reporting errors).</li>
+	<li>Units that end movement with 0 movement points or fail overrun are shaded immediately instead on next unit move (because they would not move again anyway).</li>
+	<li>Fixed coast north of Constanta and south of Odessa (added some missing sea barriers).</li>
+	<li>Replaced Rumanian 1st Corps in space 1623 of scenario 4 with Rumanian 3rd Corps to prevent having two 1st Corps counters (no effect on gameplay).</li>
+</ul>
+
+<H3>Version 4.0.0 - 22-June-09 - Dominik Derwinski </H3>
+<p>The module was created from scratch basing on existing graphics. The rules automation speeds the game a lot.</p>
+<p>Since the map is very large I reccomend turning off High-quality scaling and increasing JVM maximum heap in Preferences. Otherwise you may not be able to open the Overview window.</p>
+<ul type="disc">
+	<li>Vassal 3.1.7 compatibility.</li>
+	<li>Added inventory window.</li>
+	<li>Implemented all game rules.</li>
+</ul>
+<p>There are some minor differences between the rules in the rulebook and the game. One is that the computer will prevent you from overstacking (except during sea movement, when placing reinforcements and while retreating) instead of allowing you to overstack and then forcing you to remove units at the end of phase (the removal is still there in case you have failed to deal with overstacks caused by the actions listed above). The second is that Tank armies breakdown into or build up from Mechanized Corps only. Third is that you cant breakdown Guards and Shock armies into corps as per rule 17.3, because rule 17.4 will not let you build them up again.</p>
+<p>Please note that with the rules automation you have to finish one combat before moving to next. This makes the module great for solo, hot-seat and online play but a PBEM play will take a lot more file transfers due to many breaks and although possible may be not the best way to enjoy the module. One can't have everything :(</p>
+
+<H3>Version 3.8 - 11-November-07 - Joulien Boulenger </H3>
+<ul type="disc">
+	<li>Add charts and combat markers and results.</li>
+</ul>
+
+<H3>Version 3.7 - 20-August-07 - Brent Easton </H3>
+<ul type="disc">
+	<li>Scenario corrections.</li>
+</ul>
+
+<H3>Version 3.6.1 - 22-June-07 - Brent Easton </H3>
+<ul type="disc">
+	<li>Added Soviet Perm. elimianted box to offboard boxes.</li>
+</ul>
+
+<H3>Version 3.6 - 9-June-07 - Brent Easton </H3>
+<ul type="disc">
+	<li>Updated startups for Barbarossa, Russia Resurgent, Turning Point.</li>
+	<li>Don't mark units moved in offboard boxes map.</li>
+</ul>
+
+<H3>Version 3.5 - 21-May-07 - Brent Easton </H3>
+<ul type="disc">
+	<li>Added Axis offboard boxes.</li>
+</ul>
+
+<H3>Version 3.4 - 19-May-07 - Brent Easton </H3>
+<ul type="disc">
+	<li>Updated artwork for charts and turn track.</li>
+</ul>
+
+<H3>Version 3.3 - 18-May-07 - Brent Easton </H3>
+<ul type="disc">
+	<li>Corrections to Scenario startups.</li>
+</ul>
+
+
+<H3>Version 3.2 - 15-May-07 - Brent Easton </H3>
+<ul type="disc">
+	<li>Final map artwork.</li>
+</ul>
+
+<H3>Version 3.1 - 21-Mar-07 - Brent Easton </H3>
+<ul type="disc">
+	<li>Minor counter changes.</li>
+</ul>
+
+<H3>Version 3.0 - 20-Mar-07 - Brent Easton </H3>
+<ul type="disc">
+	<li>New counter artwork.</li>
+	<li>Regenerated scenario startups to reflect new artwork.</li>
+</ul>
+
+<H3>Version 2.2 - 22-Feb-07 - Brent Easton </H3>
+<ul type="disc">
+	<li>Actual new map artwork!</li>
+</ul>
+
+
+<H3>Version 2.1 - 21-Feb-07 - Brent Easton </H3>
+<ul type="disc">
+	<li>New map artwork.</li>
+</ul>
+
+<H3>Version 2.0 - 2-Feb-07 - Brent Easton </H3>
+<ul type="disc">
+	<li>New map artwork.</li>
+	<li>Added map grid reporting.</li>
+	<li>Removed all 'Alternate' map/counter options.</li>
+	<li>Updated some charts.</li>
+	<li>Added sample counters - new artwork.</li>
+</ul>
+
+<H3>Version 1.4.6 - 3-Oct-06 - Brent Easton </H3>
+<ul type="disc">
+	<li>Added War for the Heartland Scenario.</li>
+</ul>
+
+<H3>Version 1.4.5 - 2-Oct-06 - Brent Easton </H3>
+<ul type="disc">
+	<li>Added War for the Motherland Scenario.</li>
+	<li>Removed extra leader from cup.</li>
+	<li>Fixed Alternate Baku Map display.</li>
+	<li>Fixed Standard May Not Move indicator.</li>
+</ul>
+
+<H3>Version 1.4.4 - 1-Oct-06 - Brent Easton </H3>
+<ul type="disc">
+	<li>Added Russia Resurgent Scenario.</li>
+	<li>Added Barbarossa Scenario.</li>
+	<li>Added Germany's Zenith Scenario.</li>
+	<li>Added mising airbase counter to Turning Point Scenario.</li>
+	<li>New back for Soviet Leaders.</li>
+</ul>
+
+<H3>Version 1.4.3 - 1-Oct-06 - Brent Easton </H3>
+<ul type="disc">
+	<li>Added Scenario Notes tab to Notes Window.</li>
+	<li>Added Scenario Notes to Turning Point Scenario.</li>
+	<li>Completed Turning Point Scenario Standard and Alternate Version.</li>
+	<li>Added Soviet Leader Chit Pile.</li>
+</ul>
+
+<H3>Version 1.4.2 - 30-Sep-06 - Brent Easton </H3>
+<ul type="disc">
+	<li>Added Turning Point Scenario Startup.</li>
+	<li>Added Baku map for campaign game.</li>
+</ul>
+<H3>Version 1.4.1- 29-Sep-06 - Brent Easton </H3>
+<ul type="disc">
+	<li>Added missing Russian Guards counters.</li>
+</ul>
+<H3>Version 1.4- 20-Sep-06 - Brent Easton </H3>
+<ul type="disc">
+	<li>Minor changes.</li>
+</ul>
+<H3>Version 1.3.1- 16-Sep-06 - Brent Easton </H3>
+<ul type="disc">
+	<li>Alternate counter set.</li>
+	<li>Added Scenario startups.</li>
+</ul>
+
+<H3>Version 1.2 - 10-Aug-06 - Brent Easton </H3>
+<ul type="disc">
+	<li>Rebuilt with smaller maps and counters.</li>
+</ul>
+
+<H3>Version 1.1.1 - 7-Aug-06 - Brent Easton </H3>
+<ul type="disc">
+	<li>Fixed grid on Alternate maps.</li>
+</ul>
+<H3>Version 1.1 - 6-Aug-06 - Brent Easton </H3>
+<ul type="disc">
+	<li>Added new Standard artwork.</li>
+	<li>Added Alternate startup facility.</li>
+	<li>Added Alternate counter set (change on the fly) facility.</li>
+	<li>Added Graceyard window and command, Hide Delete command except when in Graveyard.</li>
+	<li>Tidied up toolbar.</li>
+</ul>
+
+<H3>Version 1.0 - Brent Easton</H3>
+<ul type="disc">
+	<li>Converted from original War for the Motherland module.</li>
+</ul>
+
+</body>
+</html>
